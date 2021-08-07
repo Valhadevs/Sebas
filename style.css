@@ -29,6 +29,53 @@ hr {
 	align-items: center;
 }
 
+/*BOTON DE HOME*/
+.button-top{
+	position: fixed;
+	background-color: #0073AD ;
+	height: 50px;
+	width: 50px;
+	margin: 20px;
+	border-radius: 8px;
+	top: 90%;
+	left: 92%;
+
+}
+
+.button-top:hover{
+	background-color: #00679B;
+	transform: scale(1.1);
+	transition-property: transform color;
+	transition-duration:.4s;
+}
+.button-top:active{
+	background-color: var(--color);
+	transform: scale(0.9);
+	transition-property: transform color;
+	transition-duration:.4s;
+}
+.button-top a i{
+	font-size: 30px;
+	height: 45px;
+	width: 45px;
+	color: white;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+@media screen and (max-width: 800px){
+	.button-top{
+	top: 91%;
+	left: 78%;
+	z-index: 150;
+	transform: scale(1.2);
+	}
+	.button-top:hover{
+	background-color: #00679B;
+	transition-property: transform color;
+	transition-duration:.4s;
+	transform: scale(1.2);
+}
+}
 /*BARRA DE NAVEGACION*/
 
 
@@ -54,6 +101,7 @@ hr {
 	font-size: 20px;
 }
 
+
 .header__nav-menu ul{
 	grid-column: 3 / 4;
 	display: grid;
@@ -66,6 +114,22 @@ hr {
 
 
 }
+@media screen and (max-width: 800px){
+	.logo{
+		display: none;
+}
+	.header__nav-menu ul{
+		grid-column: 1 / 4;
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-column-gap: 15px;
+
+
+		align-self: center;
+		justify-self: center;
+	}
+}
+
 .header__nav-menu ul li {
 	display: inline-block;
 	font-size: 13px;
@@ -85,6 +149,42 @@ hr {
 	transition-property: color;
 
 
+}
+/*SUBMENU PORTFOLIO*/
+.header__nav-menu li ul{
+	display: none;
+	position: absolute;
+	background-color: black;
+
+}
+
+.header__nav-menu li:hover ul{
+	display: block;	
+}
+.header__nav-menu li ul{
+	padding-top: 20px;
+	border:1px solid;
+	text-align: left;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px; 
+	box-shadow: -5px 28px 14px -6px rgba(0,0,0,0.78);
+	-webkit-box-shadow: -5px 28px 14px -6px rgba(0,0,0,0.78);
+	-moz-box-shadow: -5px 28px 14px -6px rgba(0,0,0,0.78);
+}
+
+.header__nav-menu li ul li {
+	padding: 20px;
+	width: 100%;
+
+}
+
+.header__nav-menu li ul li:hover {
+	background-color: grey;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px; 
+}
+.header__nav-menu li ul li a {
+	white-space: nowrap;
 }
 
 /*IMAGEN HEADER*/
@@ -156,6 +256,8 @@ hr {
 	transform: scale(0.98);
 	
 }
+
+/**/
 
 /*SOBRE NOSOTROS ------------------------------------------------------------------------------------*/
 
